@@ -1,15 +1,17 @@
 import React, { Component } from 'react'
-import { Text, StyleSheet, View, SafeAreaView } from 'react-native'
+import { StyleSheet } from 'react-native'
+import Block from '../components/Block'
+import Text from '../components/Text'
 
 
 export default class Login extends Component {
     render() {
         return (
-            <SafeAreaView style={{ flex: 1 }}>
+            <Block>
                 <Text>Login component</Text>
-            </SafeAreaView>
+            </Block>
         )
     }
 }
 
-const styles = StyleSheet.create({})
+// const styles = StyleSheet.create({})

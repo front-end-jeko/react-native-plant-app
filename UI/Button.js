@@ -1,6 +1,7 @@
 import React from 'react'
 import { Text, View, StyleSheet, TouchableHighlight } from 'react-native'
 
+
 const ButtonWithBackground = ({ children, onPress, opacity, backgroundColor }) => (
     <TouchableHighlight underlayColor="transparent" activeOpacity={opacity} onPress={onPress}>
         <View style={[styles.button, { backgroundColor: backgroundColor }]}>

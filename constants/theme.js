@@ -20,8 +20,10 @@ const sizes = {
   h1: 26,
   h2: 20,
   h3: 18,
+  h4: 14,
   title: 18,
   header: 16,
+  inputText: 14,
   body: 14,
   caption: 12,
   SFUITextBold: 'SFUIText-Bold',
@@ -38,8 +40,14 @@ const fonts = {
   h3: {
     fontSize: sizes.h3
   },
+  h4: {
+    fontSize: sizes.h3
+  },
   header: {
     fontSize: sizes.header
+  },
+  inputText: {
+    fontSize: sizes.inputText
   },
   title: {
     fontSize: sizes.title
