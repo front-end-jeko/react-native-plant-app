@@ -2,7 +2,8 @@ import React, { Component } from 'react'
 import { View, StyleSheet, TouchableHighlight, Image, Modal, ScrollView, SafeAreaView } from 'react-native';
 import { LinearGradient } from 'expo-linear-gradient';
 import AppIntroSlider from 'react-native-app-intro-slider';
-import * as Font from 'expo-font';
+// import * as Font from 'expo-font';
+import FontLoad from '../UI/FontLoad'
 
 import * as theme from '../constants/theme';
 
@@ -24,26 +25,30 @@ class Welcome extends Component {
       { key: 3, source: require('../assets/images/illustration_3.png') },
     ]
   }
+
+  componentDidMount(){
+    <FontLoad />
+  }
   
   static navigationOptions = {
     header: null
   };
   
 
-  async componentDidMount() {
-    try {
-      await Font.loadAsync({
-        'SFUITextBold': require('../assets/fonts/SFUIText-Bold.ttf'),
-        'SFUITextMedium': require('../assets/fonts/SF-UI-Text-Medium.ttf'),
-        'SFUITextRegular': require('../assets/fonts/SFUIText-Regular.ttf'),
-      });
+  // async componentDidMount() {
+  //   try {
+  //     await Font.loadAsync({
+  //       'SFUITextBold': require('../assets/fonts/SFUIText-Bold.ttf'),
+  //       'SFUITextMedium': require('../assets/fonts/SF-UI-Text-Medium.ttf'),
+  //       'SFUITextRegular': require('../assets/fonts/SFUIText-Regular.ttf'),
+  //     });
   
-      this.setState({ fontLoaded: true });
+  //     this.setState({ fontLoaded: true });
 
-    } catch(error) {
-      console.log('გაისროლა ერორი');
-    }
-  }
+  //   } catch(error) {
+  //     console.log('გაისროლა ერორი');
+  //   }
+  // }
 
 
   _renderItem = ({ item }) => {
@@ -155,6 +160,7 @@ class Welcome extends Component {
               activeDotStyle={{backgroundColor: theme.colors.primary}}
               showPrevButton={false}
               showNextButton={false}
+              keyExtractor={item => item.key.toString()}
             />
           </Block>
 

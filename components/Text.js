@@ -46,6 +46,7 @@ export default class Typography extends Component {
       ...props
     } = this.props;
 
+    
     const textStyles = [
       styles.text,
       h1 && styles.h1,
